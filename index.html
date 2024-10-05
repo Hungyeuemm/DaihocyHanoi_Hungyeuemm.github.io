@@ -1,0 +1,129 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Đại học y Hà Nội</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8" />
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <link rel="icon" type="https://inkythuatso.com/uploads/thumbnails/800/2021/12/logo-dai-hoc-y-ha-noi-inkythuatso-01-25-14-49-41.jpg" href="images/favicon.jpg">
+    <!-- Bootstrap CSS v5.2.1 -->
+    <link
+        href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+        rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
+        crossorigin="anonymous"
+    />
+    <style>
+        .lodo {
+            width: 50%;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        .hung {
+            display: flex;
+            height: 100%;
+            align-items: center;
+            justify-content: center;
+            font-size: 0.8rem;
+            color: #fff;
+        }
+        .nav {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            height: 30vh;
+            margin-top: 10rem;
+        }
+        .search-box {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+        select,
+        .input-box,
+        .captcha {
+            width: 100%;
+            padding: 8px;
+            border-radius: 4px;
+            border: 1px solid #ccc;
+
+        }
+        .captcha-box {
+            display: flex;
+            align-items: center;
+        }
+        .captcha {
+            flex: 1;
+        }
+        .refresh-btn {
+            padding: 8px;
+            margin-left: 5px;
+            border: none;
+            background-color: #fff;
+            color: #005fa3;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .filter-btn {
+            padding: 8px;
+            border: none;
+            background-color: #fff;
+            color: #005fa3;
+            border-radius: 4px;
+            cursor: pointer;
+            margin-top: 8%;
+        }
+        .filter-btn:hover,
+        .refresh-btn:hover {
+            background-color: #e6e6e6;
+        }
+    </style>
+</head>
+<body>
+    <header style="background-color: #9f314c;">
+        <div class="container ">
+            <div class="row" style="width: 100%;">
+                <div class="col" style="display: flex; align-items: center;">
+                    <div class="lodo">Chào mừng đến <br>Trường Đại học Y Hà Nội</div>
+                </div>
+                <div class="col" style="display: flex;align-items: center;">
+                    <img style="height: 80%;" src="https://hmu.edu.vn/assets/img/Logoo.png" alt="">
+                </div>
+                <div class="col">
+                    <div class="hung">Tin tức | Liên Hệ |
+                        <img style="width: 20px; margin-left: 2%;" src="https://hmu.edu.vn/assets/css/home/frontend/image/vi.jpg" alt=""> Tiếng Việt
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+    <div class="nav">
+        <div class="container" id="an" style="background-color:#9f314c; color: #fff; padding: 20px; border-radius: 8px; text-align: center; width: 500px;">
+            <h2>Tra cứu kết quả tuyển sinh</h2>
+           
+                <input type="text" class="input-box" placeholder=" Số báo danh sinh viên">
+                <button class="filter-btn" onclick="timKiem()">Tìm kiếm</button>
+            </div>
+    
+        <div id="not-found" style=" display: none;">
+            <p style="margin-top: 50%;">Không tìm thấy</p>
+        </div>
+    </div>
+
+    <script>
+        function timKiem() {
+            // Ẩn phần tử "Không tìm thấy" (nếu nó đang hiện)
+            document.getElementById("not-found").style.display = "none";
+            
+            // Hiển thị phần tử "Không tìm thấy" sau 0.5 giây
+            setTimeout(function() {
+                document.getElementById("not-found").style.display = "block";
+                document.getElementById("an").style.display = "none"
+            }, 500);
+        }
+    </script>
+</body>
+</html>
